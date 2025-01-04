@@ -1,0 +1,30 @@
+<!-- 글쓰기 form생성실습 -->
+<!-- 제목, 내용입력(사이즈 넉넉하게), 예약여부(yes or no - radio), 예약등록시간 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기 form 생성 실습습</title>
+ </head>
+ <body>
+    <div>
+        <label for="title">제목</label>
+        <input type="text" id = "title" name="title" size="10" maxlength="10">
+    </div>
+    <div>
+        <label>내용입력</label><br>
+        <textarea name="contents" rows="5" cols="30" maxlength="100"></textarea>
+    </div>
+    <div>
+        <label>예약여부</label>
+        <input type="radio" name="booking" value="yes">yes
+        <input type="radio" name="booking" value="no">no
+    </div>
+    <div>
+        <label>예약등록시간</label>
+        <input type="datetime-local" name = "date">
+    </div>
+    
+ </body>
+ </html>
