@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+<body>
+    <h2>계산 프로그램 구현</h2>
+    <div>
+        사칙연산선택
+        <select id="cal">
+            <option value="q">덧셈</option>
+            <option value="w">뺄셈</option>
+            <option value="e">곱셈</option>
+            <option value="r">나눗셈</option>
+        </select>
+        <input id = "a" type="number">
+        <input id = "b" type="number">
+        <button onclick="calc()">연산실행</button>
+    </div>
+    <div id ="result">결과값</div>
+    <script>
+        function calc(){
+            const what = document.getElementById("cal").value;
+            let c = 0;
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            console.log(a);
+            console.log(b);
+            if(what=='q')c=a+b;
+            else if(what=='w')c=a-b;
+            else if(what=='e')c=a*b;
+            else if(what=='r')c=a/b;
+            document.getElementById("result").innerHTML=c;
+        }
+    </script>
+</body>
+</html>
