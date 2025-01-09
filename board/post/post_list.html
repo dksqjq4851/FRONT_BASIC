@@ -45,7 +45,7 @@
     </div>
     <script>
         async function serverData(){
-            const response1 = await axios.get(`http://localhost:8081/post/list`);
+            const response1 = await axios.get(`http://ec2-43-200-174-236.ap-northeast-2.compute.amazonaws.com:8081/post/list`);
             const posts = response1.data;
             for(let i = 0;i<posts.length;i++){
                 document.getElementById("bodyData").innerHTML +=`<tr><td>${posts[i].id}</td><td>${posts[i].title}</td></tr>`;
